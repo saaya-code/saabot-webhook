@@ -6,7 +6,6 @@ const app = express()
 const webhook = new Topgg.Webhook("hunyan") 
 
 app.post('/dblwebhook', webhook.listener(vote => {
-  
   console.log(vote.user) 
 })) 
 
