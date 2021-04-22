@@ -5,7 +5,12 @@ const axios = require("axios")
 const webhook = new Topgg.Webhook("hunyan") 
 app.post('/dblwebhook', webhook.listener(vote => {
  axios.post(process.env.web, {
-   content:`<@${vote.user}> voted yar7em waldih`
+   embeds:[{
+      description:`<@${vote.user}> just voted for the bot!`,
+      color: 0xffe700
+   }
+   ]
+   
  })
 })) 
 
