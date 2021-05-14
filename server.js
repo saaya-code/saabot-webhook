@@ -2,7 +2,7 @@ const express = require('express')
 const Topgg = require('@top-gg/sdk')
 const app = express() 
 const axios = require("axios")
-const webhook = new Topgg.Webhook("hunyan") 
+const webhook = new Topgg.Webhook("Your Authentication word") 
 
 app.post('/dblwebhook', webhook.listener(vote => {
 var c = "0x" + Math.floor(Math.random()*16777215).toString(16);
